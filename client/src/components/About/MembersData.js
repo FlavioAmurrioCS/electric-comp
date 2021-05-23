@@ -20,7 +20,7 @@ export const items = [
     linkedIn: `Jeff's Bezos LinkedIn`
   },
   {
-    // src: require("../../img/team2.jpeg"),
+    src: require("../../img/roger.png"),
     altText: "Slide 2",
     memberName: "Roger Herbas",
     jobPosition: "Lead Electrician",

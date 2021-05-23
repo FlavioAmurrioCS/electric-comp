@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="footer__contact">
           <p>
-          5236 Saint Genevieve Place <br/>
+          7516 Lee Chapel Rd, Fairfax Station, VA 22039 <br/>
 Alexandria, VA 22315 <br/>
 <a href={`tel:+${constants.COMPANY_PHONE}`}> {constants.COMPANY_PHONE}</a> <br/> 
 <a href={`mailto:${constants.COMPANY_EMAIL}?subject=ClientQuestion`}>{constants.COMPANY_EMAIL}</a> <br/>
