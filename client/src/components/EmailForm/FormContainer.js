@@ -10,35 +10,37 @@ class FormContainer extends Component {
     this.state = {
       input: {},
       status: null,
-      formSubmitted: null
+      formSubmitted: null,
     };
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     e.preventDefault();
     const { input } = this.state;
     input[e.target.name] = e.target.value;
     this.setState({ input: input });
   };
 
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
-      axios.defaults.headers.post["Content-Type"] = "application/json";
-      axios
-        .post(`https://www.enformed.io/${process.env.REACT_APP_EMAIL_TOKEN}/`, this.state.input)
-        .then(response =>
-         { 
-           response.statusText === "OK"
-            ? this.setState({
-                formSubmitted: true,
-                status: true
-              })
-            : this.setState({
-                formSubmitted: true,
-                status: false
-              })}
-        )
-        .catch(error => console.log(error));
+    axios.defaults.headers.post["Content-Type"] = "application/json";
+    axios
+      .post(
+        `https://www.enformed.io/${process.env.REACT_APP_EMAIL_TOKEN}/`,
+        this.state.input
+      )
+      .then((response) => {
+        response.statusText === "OK"
+          ? this.setState({
+              formSubmitted: true,
+              status: true,
+            })
+          : this.setState({
+              formSubmitted: true,
+              status: false,
+            });
+      })
+      .catch((error) => console.log(error));
   };
 
   render() {

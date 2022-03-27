@@ -17,7 +17,7 @@ export const items = [
     their satisfaction.`,
     email: `ntorrico@desielectric.com`,
     phone: `571-318-0076`,
-    linkedIn: `Jeff's Bezos LinkedIn`
+    linkedIn: `Jeff's Bezos LinkedIn`,
   },
   {
     src: require("../../img/roger.png"),
@@ -30,7 +30,7 @@ export const items = [
     operations of DESI. He is now the lead electrician and is well versed in all aspects of the trade.`,
     email: `rherbas@desielectric.com`,
     phone: `123456789`,
-    linkedIn: `Jeff's Bezos LinkedIn`
+    linkedIn: `Jeff's Bezos LinkedIn`,
   },
   {
     // src: require("../../img/team4.jpg"),
@@ -45,6 +45,6 @@ export const items = [
     started his own company called Dodd Electric Services. After 14 years Nick changed the name to Diversified Electric Services, Inc. and in 2018 transferred ownership to Neyer. Nick holds a Master Electrician license for Washington, D.C., Maryland, and Virginia.`,
     email: `ndodd@desielectric.com`,
     phone: `123456789`,
-    linkedIn: `Jeff's Bezos LinkedIn`
-  }
+    linkedIn: `Jeff's Bezos LinkedIn`,
+  },
 ];

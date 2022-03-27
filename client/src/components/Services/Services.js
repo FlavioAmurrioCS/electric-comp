@@ -1,6 +1,6 @@
 import React from "react";
-import MainServices from './MainServices';
-import AdditionalServices from './AdditionalServices';
+import MainServices from "./MainServices";
+import AdditionalServices from "./AdditionalServices";
 
 const Services = () => {
   return (

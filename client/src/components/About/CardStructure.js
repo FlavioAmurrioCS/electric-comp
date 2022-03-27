@@ -1,18 +1,18 @@
 import React from "react";
-import { Card, CardImg, CardTitle, CardBody, CardSubtitle} from "reactstrap";
+import { Card, CardImg, CardTitle, CardBody, CardSubtitle } from "reactstrap";
 
 const CardStrcture = (src, name, jobPosition) => {
-    return (
+  return (
     <Card className="member-title-card">
-        <div className="cardimage-container">
+      <div className="cardimage-container">
         <CardImg top width="100%" src={src} alt="Image Not Available" />
-        </div>
-        <CardBody>
+      </div>
+      <CardBody>
         <CardTitle>{name}</CardTitle>
         <CardSubtitle>{jobPosition}</CardSubtitle>
-        </CardBody>
+      </CardBody>
     </Card>
-    )
-}
+  );
+};
 
 export default CardStrcture;

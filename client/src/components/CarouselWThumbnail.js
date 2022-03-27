@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
-import {
-  Carousel,
-  CarouselItem
-} from 'reactstrap';
+import React, { Component } from "react";
+import { Carousel, CarouselItem } from "reactstrap";
 
 class CarouselWThumbnail extends Component {
   constructor(props) {
@@ -25,13 +22,19 @@ class CarouselWThumbnail extends Component {
 
   next() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === this.props.data.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex =
+      this.state.activeIndex === this.props.data.length - 1
+        ? 0
+        : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? this.props.data.length - 1 : this.state.activeIndex - 1;
+    const nextIndex =
+      this.state.activeIndex === 0
+        ? this.props.data.length - 1
+        : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -54,32 +57,30 @@ class CarouselWThumbnail extends Component {
       );
     });
 
-
     return (
-        <div className="carousel-container">
+      <div className="carousel-container">
         <ol className="carousel-indicators">
           {this.props.data.map((item, index) => {
             return (
               <li
                 key={index}
                 onClick={() => this.goToIndex(index)}
-                className={index === activeIndex ? "" : "inactive-item" }
-                style={{ backgroundImage: `url(${item})`}}
+                className={index === activeIndex ? "" : "inactive-item"}
+                style={{ backgroundImage: `url(${item})` }}
               />
             );
           })}
         </ol>
         <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        {slides}
-      </Carousel>
-        </div>
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+        >
+          {slides}
+        </Carousel>
+      </div>
     );
   }
 }
-
 
 export default CarouselWThumbnail;
